@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+	<head> 
+		<meta charset=UTF-8>
+	
+		<link
+			rel="stylesheet" 
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+		/>
+		
+		<link
+			rel="stylesheet" 
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+			crossorigin="anonymous" 
+		/>
+		
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" 
+			rel="stylesheet" 
+		/>	
+		
+		<link 
+			rel="stylesheet" 
+			type="text/css" 
+			href="./style.css" 
+		/>
+		
+		<title>Weather by City App, feat. the OpenWeather API</title> 
+		
+		<meta name="author" content="Alvin H. Revilas"> 
+		<meta name="author_email" content="alvinrevilas@yahoo.com"> 
+		
+	</head> 
+	
+	<body> 
+	
+		<div class="container"> 
+			<div class="row"> 
+				<div class="col-md-3 col-sm-12 AlvLeftPanel"> 
+					<div class="card" style="height: 5rem; border: 0"> 
+						<label for="posCity">Search for a City:</label>
+						<p><input type="text" name="posCity" id="inputCity" size="15" value="City name please"></input><button class="searchBtn" id="btnGetWeather"><i class="fas fa-search"></i></button></p>
+					</div> 
+					<div class="card" style="">
+						<ul class="list-group list-group-flush" id="cityList">
+						</ul>
+					</div>
+				</div> 
+				<div class="col-md-9 col-sm-12"> 
+						<table border="0"> 
+							<tr> 
+								<td><span id="pCityNameDate">Ready to get weather for a city!</span><img src="http://openweathermap.org/img/wn/02d@2x.png" id="iIcon" width="75" height="75" border="0" />
+								</td> 
+							</tr> 
+							<tr> 
+								<td><span id="pTemp"></span>
+								</td> 
+							</tr> 
+							<tr> 
+								<td><span id="pHumid"></span>
+								</td> 
+							</tr> 
+							<tr> 
+								<td><span id="pWind"></span>
+								</td> 
+							</tr> 
+							<tr> 
+								<td><span id="pUV"></span> &nbsp;<a href="http://www.theozonehole.com/uvindex.htm" id="aUVSafety"></a></td> 
+							</tr> 
+						</table> 
+					<div class="row">
+						<div class="col-sm-12" id="forecastRow"> 
+							<table border="0"> 
+								<tr> 
+									<td id="cell_0" class="forecastCell"></td> 
+									<td id="cell_1" class="forecastCell"></td> 
+									<td id="cell_2" class="forecastCell"></td> 
+									<td id="cell_3" class="forecastCell"></td> 
+									<td id="cell_4" class="forecastCell"></td> 
+								</tr> 
+							</table> 
+						</div> 
+					</div>  
+				</div> 
+			</div> 
+		</div> 
+	
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> 
+		<script src="./myscript.js"></script>
+		
+	</body> 
+</html> 
